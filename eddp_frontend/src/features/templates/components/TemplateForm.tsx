@@ -249,7 +249,6 @@ const createEnterpriseVariableNode = (name: string, className: string) => Node.c
       .replace(/^_+|_+$/g, '');
     const token = normalizedField || fallbackToken || 'variable';
     const normalizedValue = typeof normalized === 'string' && normalized.trim() ? normalized.trim() : `<${token}>`;
-
     return [
       'span',
       mergeAttributes(
@@ -267,6 +266,24 @@ const createEnterpriseVariableNode = (name: string, className: string) => Node.c
       normalizedValue,
     ];
   },
+
+  // ---- ADDED: plain-text serialization for atom leaf node ------------------
+  // Makes the chip copyable as "<loan_tenure>" (Ctrl+C / clipboard) and ensures
+  // editor.getText() and backend diff extraction include the token so nearby
+  // edits (e.g. removing " Months") are detected and rendered correctly.
+  renderText({ node }) {
+    const attrs = (node.attrs ?? {}) as Record<string, unknown>;
+    const field = typeof attrs.field === 'string' ? attrs.field.trim() : '';
+    const label = typeof attrs.label === 'string' ? attrs.label.trim() : '';
+    const normalized = typeof attrs.normalized === 'string' ? attrs.normalized.trim() : '';
+    const fallbackToken = label
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_')
+      .replace(/^_+|_+$/g, '');
+    const token = field || fallbackToken || 'variable';
+    return normalized || `<${token}>`;
+  },
+  // -------------------------------------------------------------------------
 });
 
 const VariableChipNode = createEnterpriseVariableNode('variableChip', 'variable-chip-simple');

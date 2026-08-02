@@ -146,6 +146,13 @@ export type ApprovalStatus = 'PENDING' | 'APPROVED' | 'REJECTED' | 'REVERTED' | 
 
 export type ReviewAction = 'APPROVED' | 'REJECTED' | 'REVERTED' | 'SENT_BACK' | 'RESOLVED' | 'PENDING';
 
+export type InlineDiffOp = 'equal' | 'insert' | 'delete';
+
+export type InlineDiffSegment = {
+  op: InlineDiffOp;
+  text: string;
+};
+
 export type ElementChange = {
   id: Uuid;
   element_id: string;
@@ -157,6 +164,9 @@ export type ElementChange = {
   new_text?: string;
   old_context_text?: string;
   new_context_text?: string;
+  inline_segments?: InlineDiffSegment[];
+  old_path?: string;
+  new_path?: string;
   diff_granularity?: string;
   table_index?: number;
   row_index?: number;
@@ -295,3 +305,4 @@ export type TemplatePdfGenerateResponse = {
 
 // Re-export editor orientation type from TemplateForm.
 export type { Orientation } from './components/TemplateForm';
+

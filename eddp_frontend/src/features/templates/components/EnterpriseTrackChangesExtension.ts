@@ -4,7 +4,7 @@ import { Plugin, PluginKey } from '@tiptap/pm/state';
 import { Decoration, DecorationSet } from '@tiptap/pm/view';
 import type { Node as ProseMirrorNode } from '@tiptap/pm/model';
 
-import type { ElementChange, SemanticChangeType } from '../types';
+import type { ElementChange, InlineDiffSegment, SemanticChangeType } from '../types';
 
 type TrackChangesPluginState = {
   decorations: DecorationSet;
@@ -399,9 +399,136 @@ const buildTooltip = (change: ElementChange, semanticType: SemanticChangeType): 
   return parts.join('\n');
 };
 
-const buildDecorations = (doc: ProseMirrorNode, changes: ElementChange[]): DecorationSet => {
+type ResolvedNode = {
+  node: ProseMirrorNode;
+  contentStart: number;
+};
+
+// Resolve a backend JSON index-path (e.g. "0.2.1") to a concrete ProseMirror
+// node plus the document position where its content begins. The leading "0"
+// refers to the doc node itself. This is deterministic and order-preserving,
+// which is what eliminates the scrambled / mis-ordered highlighting produced by
+// the previous fuzzy text-search approach.
+const resolveNodeByPath = (doc: ProseMirrorNode, path?: string | null): ResolvedNode | null => {
+  if (!path || typeof path !== 'string') return null;
+
+  const parts = path.split('.').map((part) => part.trim()).filter(Boolean);
+  if (parts.length && parts[0] === '0') {
+    parts.shift(); // drop the doc node itself
+  }
+
+  let node: ProseMirrorNode = doc;
+  let base = 0; // position where the current node's content starts
+
+  for (const part of parts) {
+    const idx = Number(part);
+    if (!Number.isInteger(idx) || idx < 0 || idx >= node.childCount) {
+      return null;
+    }
+    let childStart = base;
+    for (let i = 0; i < idx; i += 1) {
+      childStart += node.child(i).nodeSize;
+    }
+    node = node.child(idx);
+    base = childStart + 1; // content start inside the child (block / textblock)
+  }
+
+  return { node, contentStart: base };
+};
+
+const reconstructNewText = (segments: InlineDiffSegment[]): string =>
+  segments
+    .filter((seg) => seg.op !== 'delete')
+    .map((seg) => seg.text)
+    .join('')
+    .replace(/\r\n/g, '\n');
+
+// Structural, order-preserving decoration builder driven by the ProseMirror JSON
+// node-path and the ordered inline segments computed on the backend.
+// Returns true if it fully handled the change, false to fall back to fuzzy mode.
+const applyStructuralDecorations = (
+  doc: ProseMirrorNode,
+  change: ElementChange,
+  decorations: Decoration[],
+): boolean => {
+  const segments = change.inline_segments;
+  const path = change.new_path || change.old_path;
+  if (!segments || !segments.length || !path) return false;
+
+  const resolved = resolveNodeByPath(doc, path);
+  if (!resolved || !resolved.node.isTextblock) return false;
+
+  // Alignment guard: the reconstructed "new" text (equal + insert segments) must
+  // match the rendered node text exactly, otherwise character offsets could drift
+  // (e.g. paragraphs containing variable chips / non-text inline nodes). If it
+  // cannot align, bail out and let the fuzzy matcher handle this change safely.
+  const expectedNew = reconstructNewText(segments).replace(/\n+$/, '');
+  const actualText = resolved.node.textContent.replace(/\r\n/g, '\n').replace(/\n+$/, '');
+  if (expectedNew !== actualText) {
+    return false;
+  }
+
+  const semanticType = resolveSemanticType(change);
+  const tooltip = buildTooltip(change, semanticType);
+  const statusClass = `et-status-${String(change.approval_status || '').toLowerCase()}`;
+  let cursor = resolved.contentStart;
+
+  segments.forEach((seg) => {
+    if (!seg.text) return;
+
+    if (seg.op === 'equal') {
+      cursor += seg.text.length;
+      return;
+    }
+
+    if (seg.op === 'insert') {
+      const from = cursor;
+      const to = cursor + seg.text.length;
+      decorations.push(
+        Decoration.inline(from, to, {
+          class: ['et-change-inline', 'et-change-added', statusClass].join(' '),
+          'data-change-id': change.id,
+          'data-change-type': semanticType,
+          'data-review-status': change.approval_status,
+          title: tooltip,
+        }),
+      );
+      cursor = to;
+      return;
+    }
+
+    // delete: render a strike-through widget in-place; do NOT advance the cursor.
+    const deletedText = seg.text;
+    decorations.push(
+      Decoration.widget(
+        cursor,
+        () => {
+          const el = document.createElement('span');
+          el.className = 'et-change-deleted-widget';
+          el.setAttribute('data-change-id', change.id);
+          el.setAttribute('data-change-type', semanticType);
+          el.setAttribute('data-review-status', change.approval_status);
+          el.title = tooltip;
+          el.style.whiteSpace = 'pre-wrap';
+          el.textContent = toDeletedWidgetText(deletedText);
+          return el;
+        },
+        { side: -1 },
+      ),
+    );
+  });
+
+  return true;
+};
+
+// Legacy fuzzy matcher, retained as a safe fallback for changes that lack a
+// node path / ordered segments, or that cannot be aligned structurally.
+const applyFuzzyDecorations = (
+  doc: ProseMirrorNode,
+  changes: ElementChange[],
+  decorations: Decoration[],
+): void => {
   const locations = buildMatchLocations(doc, changes);
-  const decorations: Decoration[] = [];
 
   changes.forEach((change) => {
     const location = locations[change.id];
@@ -458,6 +585,24 @@ const buildDecorations = (doc: ProseMirrorNode, changes: ElementChange[]): Decor
       }),
     );
   });
+};
+
+const buildDecorations = (doc: ProseMirrorNode, changes: ElementChange[]): DecorationSet => {
+  const decorations: Decoration[] = [];
+  const fuzzyPending: ElementChange[] = [];
+
+  changes.forEach((change) => {
+    // Prefer deterministic structural rendering; only fall back to fuzzy matching
+    // when node path / ordered segments are unavailable or cannot be aligned.
+    const handled = applyStructuralDecorations(doc, change, decorations);
+    if (!handled) {
+      fuzzyPending.push(change);
+    }
+  });
+
+  if (fuzzyPending.length) {
+    applyFuzzyDecorations(doc, fuzzyPending, decorations);
+  }
 
   return DecorationSet.create(doc, decorations);
 };
