@@ -1,0 +1,1592 @@
+[
+{
+  "model": "templates.template",
+  "pk": "52d5501a-7fed-4796-b21f-7a0272b9607a",
+  "fields": {
+    "code": "DOC_HOME_LOAN_SANCTION_LETTER_TEMPLATE_000001",
+    "created_at": "2026-07-14T01:33:55.955Z",
+    "updated_at": "2026-07-16T16:57:52.204Z",
+    "created_by": null,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "name": "HOME-LOAN-SANCTION-LETTER-TEMPLATE",
+    "description": "Standard template for home loan sanction letters including applicant details, loan terms, interest rates, and condition approvals.",
+    "status": "APPROVED",
+    "category": "LOAN TEMPLATE",
+    "document": "be941c50-f660-4026-a83b-4a21ce7502bc",
+    "template_type": "DYNAMIC",
+    "content_type": "application/json",
+    "content_json": "{\"elements\": [{\"x\": 241, \"y\": 32, \"id\": \"460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8\", \"page\": 1, \"text\": \"Sanction Letter\", \"type\": \"heading\", \"align\": \"left\", \"color\": \"#1F2937\", \"label\": \"Heading\", \"width\": 320, \"height\": 56, \"margin\": 0, \"zIndex\": 2, \"binding\": \"\", \"groupId\": null, \"opacity\": 1, \"padding\": 6, \"visible\": true, \"fontSize\": 30, \"imageUrl\": \"\", \"rotation\": 0, \"condition\": \"\", \"fontStyle\": \"normal\", \"fontWeight\": \"700\", \"borderColor\": \"#9AA9BA\", \"borderWidth\": 0, \"formatLabel\": \"none\", \"formatValue\": \"none\", \"tableFooter\": false, \"tableHeader\": true, \"repeatSource\": \"\", \"tableBorders\": true, \"tableColumns\": [], \"tableSorting\": \"\", \"labelPosition\": \"none\", \"tableGrouping\": \"\", \"textDecoration\": \"none\", \"backgroundColor\": \"transparent\", \"tableAlternating\": true, \"tableRepeatingRows\": false}, {\"x\": 24, \"y\": 104, \"id\": \"b11b0f7f-587a-4aab-8fdc-849828be3300\", \"page\": 1, \"text\": \"Dear {{applicant_name}},\\nWe are pleased to inform you that your loan application has been approved. Your loan amount of {{loan_amount}} has been sanctioned at an interest rate of {{interest_rate}}.\", \"type\": \"paragraph\", \"align\": \"left\", \"color\": \"#1F2937\", \"label\": \"Paragraph\", \"width\": 760, \"height\": 152, \"margin\": 0, \"zIndex\": 1, \"binding\": \"\", \"groupId\": null, \"opacity\": 1, \"padding\": 6, \"visible\": true, \"fontSize\": 14, \"imageUrl\": \"\", \"rotation\": 0, \"condition\": \"\", \"fontStyle\": \"normal\", \"fontWeight\": \"400\", \"borderColor\": \"#9AA9BA\", \"borderWidth\": 0, \"formatLabel\": \"none\", \"formatValue\": \"none\", \"tableFooter\": false, \"tableHeader\": true, \"repeatSource\": \"\", \"tableBorders\": true, \"tableColumns\": [], \"tableSorting\": \"\", \"labelPosition\": \"none\", \"tableGrouping\": \"\", \"textDecoration\": \"none\", \"backgroundColor\": \"transparent\", \"tableAlternating\": true, \"tableRepeatingRows\": false}]}",
+    "prosemirror_json": {
+      "type": "doc",
+      "content": []
+    },
+    "page_size": "A4",
+    "page_orientation": "PORTRAIT",
+    "is_default": true,
+    "effective_date": "2026-07-17T03:30:00Z",
+    "lifecycle_status": "INACTIVE",
+    "approved_by": 1,
+    "approved_at": "2026-07-16T05:19:38.949Z",
+    "review_comments": ""
+  }
+},
+{
+  "model": "templates.template",
+  "pk": "9ddccbb4-a956-4306-b09b-84def1e91df0",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001",
+    "created_at": "2026-07-14T04:57:49.331Z",
+    "updated_at": "2026-07-17T01:15:25.417Z",
+    "created_by": null,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "name": "SAMPLE",
+    "description": "",
+    "status": "APPROVED",
+    "category": "LOAN TEMPLATE",
+    "document": "be941c50-f660-4026-a83b-4a21ce7502bc",
+    "template_type": "STATIC",
+    "content_type": "application/json",
+    "content_json": "{\"version\":\"rich_v1\",\"html\":\"<h1 style=\\\"text-align: center;\\\"><span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">SAMPLE SANCTION LETTER</span></h1><p><span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">Dear <span data-field=\\\"applicant_name\\\" data-label=\\\"Applicant Name\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\">Applicant Name</span> ,</span></p><p><span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">we are pleased to inform you that your loan application is approved.Your Loan Amount of <span data-field=\\\"loan_amount\\\" data-label=\\\"Loan Amount\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\">Loan Amount</span> has been sanctioned at an interst rate of <span data-field=\\\"interest_rate\\\" data-label=\\\"Interest Rate\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\">Interest Rate</span> .</span></p><p></p>\",\"page\":{\"size\":\"A4\",\"orientation\":\"PORTRAIT\"},\"elements\":[{\"id\":\"275fba20-4edb-4b0b-ad19-01f8a5622a2c\",\"type\":\"heading\",\"label\":\"Heading\",\"page\":1,\"x\":40,\"y\":40,\"width\":700,\"height\":56,\"rotation\":0,\"opacity\":1,\"zIndex\":1,\"text\":\"<span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">SAMPLE SANCTION LETTER</span>\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"center\",\"fontSize\":30,\"fontWeight\":\"700\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"},{\"id\":\"bf2852a4-c921-4879-8f1f-237c080c95f4\",\"type\":\"paragraph\",\"label\":\"Paragraph\",\"page\":1,\"x\":40,\"y\":104,\"width\":700,\"height\":48,\"rotation\":0,\"opacity\":1,\"zIndex\":2,\"text\":\"<span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">Dear {{applicant_name}} ,</span>\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"left\",\"fontSize\":12,\"fontWeight\":\"400\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"},{\"id\":\"5876894f-2f1e-43d5-8342-b9a3ad936dcc\",\"type\":\"paragraph\",\"label\":\"Paragraph\",\"page\":1,\"x\":40,\"y\":160,\"width\":700,\"height\":48,\"rotation\":0,\"opacity\":1,\"zIndex\":3,\"text\":\"<span style=\\\"font-family: &quot;Times New Roman&quot;;\\\">we are pleased to inform you that your loan application is approved.Your Loan Amount of {{loan_amount}} has been sanctioned at an interst rate of {{interest_rate}} .</span>\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"left\",\"fontSize\":12,\"fontWeight\":\"400\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"},{\"id\":\"9e154217-cba8-4e88-b8d0-227ae910cba3\",\"type\":\"paragraph\",\"label\":\"Paragraph\",\"page\":1,\"x\":40,\"y\":216,\"width\":700,\"height\":48,\"rotation\":0,\"opacity\":1,\"zIndex\":4,\"text\":\"\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"left\",\"fontSize\":12,\"fontWeight\":\"400\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"}]}",
+    "prosemirror_json": {
+      "type": "doc",
+      "content": []
+    },
+    "page_size": "A4",
+    "page_orientation": "PORTRAIT",
+    "is_default": false,
+    "effective_date": "2026-07-18T03:30:00Z",
+    "lifecycle_status": "INACTIVE",
+    "approved_by": 1,
+    "approved_at": "2026-07-17T01:15:25.416Z",
+    "review_comments": ""
+  }
+},
+{
+  "model": "templates.templateversion",
+  "pk": "42ae2558-44a9-4a68-b11e-3be56b9a1993",
+  "fields": {
+    "code": "TPL_VER_P4_1",
+    "status": "DRAFT",
+    "created_at": "2026-07-15T00:28:33.413Z",
+    "updated_at": "2026-07-15T00:28:33.413Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template": "a9429302-353c-455b-94c2-a51a6b8d865b",
+    "version_number": 1,
+    "version_name": "P4 v1",
+    "version_status": "DRAFT",
+    "template_json": {
+      "blocks": []
+    },
+    "change_summary": "phase4 seed",
+    "published_at": null,
+    "base_version": null,
+    "diff_data": {},
+    "approved_by": null,
+    "approved_at": null
+  }
+},
+{
+  "model": "templates.templateversion",
+  "pk": "8e75bd61-e7b2-4394-b83e-a2494246bd09",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001_V1",
+    "status": "DRAFT",
+    "created_at": "2026-07-16T16:21:34.766Z",
+    "updated_at": "2026-07-16T16:21:34.766Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template": "9ddccbb4-a956-4306-b09b-84def1e91df0",
+    "version_number": 1,
+    "version_name": "v1.0",
+    "version_status": "APPROVED",
+    "template_json": "{\"version\":\"rich_v1\",\"html\":\"<h1 style=\\\"text-align: center;\\\">Sample letter</h1><p>Dear <span data-field=\\\"applicant_name\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\" field=\\\"applicant_name\\\" label=\\\"Applicant Name\\\">Applicant Name</span>,<br>We are pleased to sanction the loan amount of <span data-field=\\\"loan_amount\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\" field=\\\"loan_amount\\\" label=\\\"Loan Amount\\\">Loan Amount</span> for the ternure <span data-field=\\\"loan_tenure\\\" class=\\\"variable-chip\\\" contenteditable=\\\"false\\\" field=\\\"loan_tenure\\\" label=\\\"Loan Tenure\\\">Loan Tenure</span>.</p>\",\"page\":{\"size\":\"A4\",\"orientation\":\"PORTRAIT\"},\"elements\":[{\"id\":\"5be03fd7-1d5f-4940-890f-a0debafd48ba\",\"type\":\"heading\",\"label\":\"Heading\",\"page\":1,\"x\":40,\"y\":40,\"width\":700,\"height\":56,\"rotation\":0,\"opacity\":1,\"zIndex\":1,\"text\":\"Sample letter\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"left\",\"fontSize\":30,\"fontWeight\":\"700\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"},{\"id\":\"7585cbde-a378-4f4f-97e2-2c5e0accae05\",\"type\":\"paragraph\",\"label\":\"Paragraph\",\"page\":1,\"x\":40,\"y\":104,\"width\":700,\"height\":48,\"rotation\":0,\"opacity\":1,\"zIndex\":2,\"text\":\"Dear {{applicant_name}},<br>We are pleased to sanction the loan amount of {{loan_amount}} for the ternure {{loan_tenure}}.\",\"binding\":\"\",\"visible\":true,\"margin\":0,\"padding\":0,\"align\":\"left\",\"fontSize\":12,\"fontWeight\":\"400\",\"fontStyle\":\"normal\",\"textDecoration\":\"none\",\"color\":\"#111827\",\"backgroundColor\":\"transparent\",\"borderColor\":\"#d1d5db\",\"borderWidth\":0,\"imageUrl\":\"\",\"condition\":\"\",\"repeatSource\":\"\",\"tableColumns\":[],\"tableGrouping\":\"\",\"tableSorting\":\"\",\"tableRepeatingRows\":false,\"tableFooter\":false,\"tableHeader\":true,\"tableBorders\":true,\"tableAlternating\":false,\"groupId\":null,\"labelPosition\":\"none\",\"formatLabel\":\"\",\"formatValue\":\"\"}]}",
+    "change_summary": "Initial approved version",
+    "published_at": "2026-07-16T16:21:34.764Z",
+    "base_version": null,
+    "diff_data": {},
+    "approved_by": 1,
+    "approved_at": "2026-07-16T16:21:34.764Z"
+  }
+},
+{
+  "model": "templates.templateversion",
+  "pk": "90bf6cde-e8c0-4eb3-896f-cb47fa7c9f87",
+  "fields": {
+    "code": "TVR-946B7EFF2306",
+    "status": "ACTIVE",
+    "created_at": "2026-07-14T15:49:19.704Z",
+    "updated_at": "2026-07-16T06:50:32.887Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template": "52d5501a-7fed-4796-b21f-7a0272b9607a",
+    "version_number": 1,
+    "version_name": "Initial Version",
+    "version_status": "APPROVED",
+    "template_json": {
+      "body_html": "<h2>{{applicant_name}}</h2><p>Loan Amount: {{loan_amount}}</p><p>Interest Rate: {{interest_rate}}</p><p>Tenure: {{loan_tenure}}</p><p>Sanction Date: {{sanction_date}}</p><p>Reference: {{loan_reference_number}}</p><p>Branch: {{branch_name}}</p>"
+    },
+    "change_summary": "Initial version auto-created to enable runtime preview.",
+    "published_at": "2026-07-14T15:49:19.703Z",
+    "base_version": null,
+    "diff_data": {},
+    "approved_by": null,
+    "approved_at": null
+  }
+},
+{
+  "model": "templates.templateversion",
+  "pk": "b9875167-9b5d-486d-b37a-dc295ac54bf4",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001_V2",
+    "status": "DRAFT",
+    "created_at": "2026-07-17T07:10:45.816Z",
+    "updated_at": "2026-07-17T07:10:52.060Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template": "9ddccbb4-a956-4306-b09b-84def1e91df0",
+    "version_number": 2,
+    "version_name": "v2.0",
+    "version_status": "FOR_REVIEW",
+    "template_json": {
+      "prosemirror_json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 1,
+              "textAlign": "center"
+            },
+            "content": [
+              {
+                "text": "SANCTION LETTER",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "Dear ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "applicant_name",
+                  "label": "Applicant Name"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " ,",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "loan_amount",
+                  "label": "Loan Amount"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " has been sanctioned at an interst rate of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "interest_rate",
+                  "label": "Interest Rate"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " .",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            }
+          }
+        ]
+      }
+    },
+    "change_summary": "4 element(s) added",
+    "published_at": null,
+    "base_version": "8e75bd61-e7b2-4394-b83e-a2494246bd09",
+    "diff_data": {
+      "added": [
+        {
+          "id": "path:0.0:heading",
+          "raw": {
+            "type": "heading",
+            "attrs": {
+              "level": 1,
+              "textAlign": "center"
+            },
+            "content": [
+              {
+                "text": "SANCTION LETTER",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "page": 1,
+          "path": "0.0",
+          "text": "SANCTION LETTER",
+          "type": "heading",
+          "attrs": {
+            "level": 1,
+            "textAlign": "center"
+          },
+          "marks": []
+        },
+        {
+          "id": "path:0.1:paragraph",
+          "raw": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "Dear ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "applicant_name",
+                  "label": "Applicant Name"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " ,",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "page": 1,
+          "path": "0.1",
+          "text": "Dear ,",
+          "type": "paragraph",
+          "attrs": {
+            "textAlign": null
+          },
+          "marks": []
+        },
+        {
+          "id": "path:0.2:paragraph",
+          "raw": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "loan_amount",
+                  "label": "Loan Amount"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " has been sanctioned at an interst rate of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "interest_rate",
+                  "label": "Interest Rate"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " .",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "page": 1,
+          "path": "0.2",
+          "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of has been sanctioned at an interst rate of .",
+          "type": "paragraph",
+          "attrs": {
+            "textAlign": null
+          },
+          "marks": []
+        },
+        {
+          "id": "path:0.3:paragraph",
+          "raw": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            }
+          },
+          "page": 1,
+          "path": "0.3",
+          "text": "",
+          "type": "paragraph",
+          "attrs": {
+            "textAlign": null
+          },
+          "marks": []
+        }
+      ],
+      "deleted": [],
+      "summary": {
+        "added": 4,
+        "deleted": 0,
+        "modified": 0,
+        "total_changes": 4
+      },
+      "modified": [],
+      "semantic_summary": {
+        "TEXT_ADDED": 4
+      },
+      "structured_changes": [
+        {
+          "page": 1,
+          "type": "TEXT_ADDED",
+          "nodeId": "path:0.0:heading",
+          "newText": "SANCTION LETTER",
+          "oldText": "",
+          "changeId": "chg-path:0.0:heading-0",
+          "newStyle": {
+            "level": 1,
+            "textAlign": "center"
+          },
+          "newValue": {
+            "type": "heading",
+            "attrs": {
+              "level": 1,
+              "textAlign": "center"
+            },
+            "content": [
+              {
+                "text": "SANCTION LETTER",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "oldStyle": {},
+          "oldValue": null,
+          "reviewer": null,
+          "timestamp": null,
+          "coarseType": "ADDED",
+          "reviewStatus": "PENDING"
+        },
+        {
+          "page": 1,
+          "type": "TEXT_ADDED",
+          "nodeId": "path:0.1:paragraph",
+          "newText": "Dear ,",
+          "oldText": "",
+          "changeId": "chg-path:0.1:paragraph-1",
+          "newStyle": {
+            "textAlign": null
+          },
+          "newValue": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "Dear ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "applicant_name",
+                  "label": "Applicant Name"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " ,",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "oldStyle": {},
+          "oldValue": null,
+          "reviewer": null,
+          "timestamp": null,
+          "coarseType": "ADDED",
+          "reviewStatus": "PENDING"
+        },
+        {
+          "page": 1,
+          "type": "TEXT_ADDED",
+          "nodeId": "path:0.2:paragraph",
+          "newText": "we are pleased to inform you that your loan application is approved.Your Loan Amount of has been sanctioned at an interst rate of .",
+          "oldText": "",
+          "changeId": "chg-path:0.2:paragraph-2",
+          "newStyle": {
+            "textAlign": null
+          },
+          "newValue": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            },
+            "content": [
+              {
+                "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "loan_amount",
+                  "label": "Loan Amount"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " has been sanctioned at an interst rate of ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "variableChip",
+                "attrs": {
+                  "field": "interest_rate",
+                  "label": "Interest Rate"
+                },
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " .",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "textStyle",
+                    "attrs": {
+                      "color": "",
+                      "fontFamily": "\"Times New Roman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "oldStyle": {},
+          "oldValue": null,
+          "reviewer": null,
+          "timestamp": null,
+          "coarseType": "ADDED",
+          "reviewStatus": "PENDING"
+        },
+        {
+          "page": 1,
+          "type": "TEXT_ADDED",
+          "nodeId": "path:0.3:paragraph",
+          "newText": "",
+          "oldText": "",
+          "changeId": "chg-path:0.3:paragraph-3",
+          "newStyle": {
+            "textAlign": null
+          },
+          "newValue": {
+            "type": "paragraph",
+            "attrs": {
+              "textAlign": null
+            }
+          },
+          "oldStyle": {},
+          "oldValue": null,
+          "reviewer": null,
+          "timestamp": null,
+          "coarseType": "ADDED",
+          "reviewStatus": "PENDING"
+        }
+      ]
+    },
+    "approved_by": null,
+    "approved_at": null
+  }
+},
+{
+  "model": "templates.templateversion",
+  "pk": "bececc60-1826-43a1-9b50-ac9a30b33dcd",
+  "fields": {
+    "code": "DOC_HOME_LOAN_SANCTION_LETTER_TEMPLATE_000001_V2",
+    "status": "DRAFT",
+    "created_at": "2026-07-16T09:10:14.238Z",
+    "updated_at": "2026-07-16T16:57:52.189Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template": "52d5501a-7fed-4796-b21f-7a0272b9607a",
+    "version_number": 2,
+    "version_name": "v2.0",
+    "version_status": "APPROVED",
+    "template_json": {
+      "elements": [
+        {
+          "x": 241,
+          "y": 32,
+          "id": "460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8",
+          "page": 1,
+          "text": "Sanction Letter",
+          "type": "heading",
+          "align": "left",
+          "color": "#1F2937",
+          "label": "Heading",
+          "width": 320,
+          "height": 56,
+          "margin": 0,
+          "zIndex": 2,
+          "binding": "",
+          "groupId": null,
+          "opacity": 1,
+          "padding": 6,
+          "visible": true,
+          "fontSize": 30,
+          "imageUrl": "",
+          "rotation": 0,
+          "condition": "",
+          "fontStyle": "normal",
+          "fontWeight": "700",
+          "borderColor": "#9AA9BA",
+          "borderWidth": 0,
+          "formatLabel": "none",
+          "formatValue": "none",
+          "tableFooter": false,
+          "tableHeader": true,
+          "repeatSource": "",
+          "tableBorders": true,
+          "tableColumns": [],
+          "tableSorting": "",
+          "labelPosition": "none",
+          "tableGrouping": "",
+          "textDecoration": "none",
+          "backgroundColor": "transparent",
+          "tableAlternating": true,
+          "tableRepeatingRows": false
+        },
+        {
+          "x": 24,
+          "y": 104,
+          "id": "b11b0f7f-587a-4aab-8fdc-849828be3300",
+          "page": 1,
+          "text": "Dear {{applicant_name}},\nWe are pleased to inform you that your loan application has been approved. Your loan amount of {{loan_amount}} has been sanctioned at an interest rate of {{interest_rate}}.",
+          "type": "paragraph",
+          "align": "left",
+          "color": "#1F2937",
+          "label": "Paragraph",
+          "width": 760,
+          "height": 152,
+          "margin": 0,
+          "zIndex": 1,
+          "binding": "",
+          "groupId": null,
+          "opacity": 1,
+          "padding": 6,
+          "visible": true,
+          "fontSize": 14,
+          "imageUrl": "",
+          "rotation": 0,
+          "condition": "",
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "borderColor": "#9AA9BA",
+          "borderWidth": 0,
+          "formatLabel": "none",
+          "formatValue": "none",
+          "tableFooter": false,
+          "tableHeader": true,
+          "repeatSource": "",
+          "tableBorders": true,
+          "tableColumns": [],
+          "tableSorting": "",
+          "labelPosition": "none",
+          "tableGrouping": "",
+          "textDecoration": "none",
+          "backgroundColor": "transparent",
+          "tableAlternating": true,
+          "tableRepeatingRows": false
+        }
+      ]
+    },
+    "change_summary": "2 element(s) added",
+    "published_at": "2026-07-16T16:57:52.188Z",
+    "base_version": "90bf6cde-e8c0-4eb3-896f-cb47fa7c9f87",
+    "diff_data": {
+      "added": [
+        {
+          "x": 24,
+          "y": 104,
+          "id": "b11b0f7f-587a-4aab-8fdc-849828be3300",
+          "page": 1,
+          "text": "Dear {{applicant_name}},\nWe are pleased to inform you that your loan application has been approved. Your loan amount of {{loan_amount}} has been sanctioned at an interest rate of {{interest_rate}}.",
+          "type": "paragraph",
+          "align": "left",
+          "color": "#1F2937",
+          "label": "Paragraph",
+          "width": 760,
+          "height": 152,
+          "margin": 0,
+          "zIndex": 1,
+          "binding": "",
+          "groupId": null,
+          "opacity": 1,
+          "padding": 6,
+          "visible": true,
+          "fontSize": 14,
+          "imageUrl": "",
+          "rotation": 0,
+          "condition": "",
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "borderColor": "#9AA9BA",
+          "borderWidth": 0,
+          "formatLabel": "none",
+          "formatValue": "none",
+          "tableFooter": false,
+          "tableHeader": true,
+          "repeatSource": "",
+          "tableBorders": true,
+          "tableColumns": [],
+          "tableSorting": "",
+          "labelPosition": "none",
+          "tableGrouping": "",
+          "textDecoration": "none",
+          "backgroundColor": "transparent",
+          "tableAlternating": true,
+          "tableRepeatingRows": false
+        },
+        {
+          "x": 241,
+          "y": 32,
+          "id": "460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8",
+          "page": 1,
+          "text": "Sanction Letter",
+          "type": "heading",
+          "align": "left",
+          "color": "#1F2937",
+          "label": "Heading",
+          "width": 320,
+          "height": 56,
+          "margin": 0,
+          "zIndex": 2,
+          "binding": "",
+          "groupId": null,
+          "opacity": 1,
+          "padding": 6,
+          "visible": true,
+          "fontSize": 30,
+          "imageUrl": "",
+          "rotation": 0,
+          "condition": "",
+          "fontStyle": "normal",
+          "fontWeight": "700",
+          "borderColor": "#9AA9BA",
+          "borderWidth": 0,
+          "formatLabel": "none",
+          "formatValue": "none",
+          "tableFooter": false,
+          "tableHeader": true,
+          "repeatSource": "",
+          "tableBorders": true,
+          "tableColumns": [],
+          "tableSorting": "",
+          "labelPosition": "none",
+          "tableGrouping": "",
+          "textDecoration": "none",
+          "backgroundColor": "transparent",
+          "tableAlternating": true,
+          "tableRepeatingRows": false
+        }
+      ],
+      "deleted": [],
+      "summary": {
+        "added": 2,
+        "deleted": 0,
+        "modified": 0,
+        "total_changes": 2
+      },
+      "modified": []
+    },
+    "approved_by": 1,
+    "approved_at": "2026-07-16T16:57:52.188Z"
+  }
+},
+{
+  "model": "templates.templateelementchange",
+  "pk": "067ff729-59e3-4cad-b5ab-f181f3e66bb2",
+  "fields": {
+    "code": "DOC_HOME_LOAN_SANCTION_LETTER_TEMPLATE_000001_V2_460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8_ADDED",
+    "status": "DRAFT",
+    "created_at": "2026-07-16T09:10:14.266Z",
+    "updated_at": "2026-07-16T16:50:19.346Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "version": "bececc60-1826-43a1-9b50-ac9a30b33dcd",
+    "element_id": "460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8",
+    "change_type": "ADDED",
+    "old_value": null,
+    "new_value": {
+      "x": 241,
+      "y": 32,
+      "id": "460d2d0c-c4fa-42f6-9c8a-16613a9b6ee8",
+      "page": 1,
+      "text": "Sanction Letter",
+      "type": "heading",
+      "align": "left",
+      "color": "#1F2937",
+      "label": "Heading",
+      "width": 320,
+      "height": 56,
+      "margin": 0,
+      "zIndex": 2,
+      "binding": "",
+      "groupId": null,
+      "opacity": 1,
+      "padding": 6,
+      "visible": true,
+      "fontSize": 30,
+      "imageUrl": "",
+      "rotation": 0,
+      "condition": "",
+      "fontStyle": "normal",
+      "fontWeight": "700",
+      "borderColor": "#9AA9BA",
+      "borderWidth": 0,
+      "formatLabel": "none",
+      "formatValue": "none",
+      "tableFooter": false,
+      "tableHeader": true,
+      "repeatSource": "",
+      "tableBorders": true,
+      "tableColumns": [],
+      "tableSorting": "",
+      "labelPosition": "none",
+      "tableGrouping": "",
+      "textDecoration": "none",
+      "backgroundColor": "transparent",
+      "tableAlternating": true,
+      "tableRepeatingRows": false
+    },
+    "approval_status": "APPROVED",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-16T16:50:19.346Z",
+    "review_comment": ""
+  }
+},
+{
+  "model": "templates.templateelementchange",
+  "pk": "193d0b69-12cf-4ad3-9277-06538508b7fb",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001_V2_path:0.1:paragraph_ADDED",
+    "status": "DRAFT",
+    "created_at": "2026-07-17T07:10:52.090Z",
+    "updated_at": "2026-07-17T07:10:52.091Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "version": "b9875167-9b5d-486d-b37a-dc295ac54bf4",
+    "element_id": "path:0.1:paragraph",
+    "change_type": "ADDED",
+    "old_value": null,
+    "new_value": {
+      "id": "path:0.1:paragraph",
+      "raw": {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Dear ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "field": "applicant_name",
+              "label": "Applicant Name"
+            },
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "text": " ,",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "page": 1,
+      "path": "0.1",
+      "text": "Dear ,",
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "marks": [],
+      "_semantic": {
+        "page": 1,
+        "type": "TEXT_ADDED",
+        "nodeId": "path:0.1:paragraph",
+        "newText": "Dear ,",
+        "oldText": "",
+        "changeId": "chg-path:0.1:paragraph-1",
+        "newStyle": {
+          "textAlign": null
+        },
+        "newValue": {
+          "type": "paragraph",
+          "attrs": {
+            "textAlign": null
+          },
+          "content": [
+            {
+              "text": "Dear ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "variableChip",
+              "attrs": {
+                "field": "applicant_name",
+                "label": "Applicant Name"
+              },
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "text": " ,",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "oldStyle": {},
+        "oldValue": null,
+        "reviewer": null,
+        "timestamp": null,
+        "coarseType": "ADDED",
+        "reviewStatus": "PENDING"
+      }
+    },
+    "approval_status": "PENDING",
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "review_comment": ""
+  }
+},
+{
+  "model": "templates.templateelementchange",
+  "pk": "3fe2d9bc-1748-4f68-9499-7128e2603c4f",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001_V2_path:0.2:paragraph_ADDED",
+    "status": "DRAFT",
+    "created_at": "2026-07-17T07:10:52.102Z",
+    "updated_at": "2026-07-17T07:10:52.102Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "version": "b9875167-9b5d-486d-b37a-dc295ac54bf4",
+    "element_id": "path:0.2:paragraph",
+    "change_type": "ADDED",
+    "old_value": null,
+    "new_value": {
+      "id": "path:0.2:paragraph",
+      "raw": {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "field": "loan_amount",
+              "label": "Loan Amount"
+            },
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "text": " has been sanctioned at an interst rate of ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "field": "interest_rate",
+              "label": "Interest Rate"
+            },
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          },
+          {
+            "text": " .",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "page": 1,
+      "path": "0.2",
+      "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of has been sanctioned at an interst rate of .",
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "marks": [],
+      "_semantic": {
+        "page": 1,
+        "type": "TEXT_ADDED",
+        "nodeId": "path:0.2:paragraph",
+        "newText": "we are pleased to inform you that your loan application is approved.Your Loan Amount of has been sanctioned at an interst rate of .",
+        "oldText": "",
+        "changeId": "chg-path:0.2:paragraph-2",
+        "newStyle": {
+          "textAlign": null
+        },
+        "newValue": {
+          "type": "paragraph",
+          "attrs": {
+            "textAlign": null
+          },
+          "content": [
+            {
+              "text": "we are pleased to inform you that your loan application is approved.Your Loan Amount of ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "variableChip",
+              "attrs": {
+                "field": "loan_amount",
+                "label": "Loan Amount"
+              },
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "text": " has been sanctioned at an interst rate of ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "variableChip",
+              "attrs": {
+                "field": "interest_rate",
+                "label": "Interest Rate"
+              },
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            },
+            {
+              "text": " .",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "oldStyle": {},
+        "oldValue": null,
+        "reviewer": null,
+        "timestamp": null,
+        "coarseType": "ADDED",
+        "reviewStatus": "PENDING"
+      }
+    },
+    "approval_status": "PENDING",
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "review_comment": ""
+  }
+},
+{
+  "model": "templates.templateelementchange",
+  "pk": "64174384-029f-4d56-a41a-d9dfafed92c6",
+  "fields": {
+    "code": "DOC_SAMPLE_TEMPLATE_000001_V2_path:0.0:heading_ADDED",
+    "status": "DRAFT",
+    "created_at": "2026-07-17T07:10:52.082Z",
+    "updated_at": "2026-07-17T07:10:52.082Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "version": "b9875167-9b5d-486d-b37a-dc295ac54bf4",
+    "element_id": "path:0.0:heading",
+    "change_type": "ADDED",
+    "old_value": null,
+    "new_value": {
+      "id": "path:0.0:heading",
+      "raw": {
+        "type": "heading",
+        "attrs": {
+          "level": 1,
+          "textAlign": "center"
+        },
+        "content": [
+          {
+            "text": "SANCTION LETTER",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "",
+                  "fontFamily": "\"Times New Roman\""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "page": 1,
+      "path": "0.0",
+      "text": "SANCTION LETTER",
+      "type": "heading",
+      "attrs": {
+        "level": 1,
+        "textAlign": "center"
+      },
+      "marks": [],
+      "_semantic": {
+        "page": 1,
+        "type": "TEXT_ADDED",
+        "nodeId": "path:0.0:heading",
+        "newText": "SANCTION LETTER",
+        "oldText": "",
+        "changeId": "chg-path:0.0:heading-0",
+        "newStyle": {
+          "level": 1,
+          "textAlign": "center"
+        },
+        "newValue": {
+          "type": "heading",
+          "attrs": {
+            "level": 1,
+            "textAlign": "center"
+          },
+          "content": [
+            {
+              "text": "SANCTION LETTER",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "textStyle",
+                  "attrs": {
+                    "color": "",
+                    "fontFamily": "\"Times New Roman\""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "oldStyle": {},
+        "oldValue": null,
+        "reviewer": null,
+        "timestamp": null,
+        "coarseType": "ADDED",
+        "reviewStatus": "PENDING"
+      }
+    },
+    "approval_status": "PENDING",
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "review_comment": ""
+  }
+},
+{
+  "model": "templates.templateelementchange",
+  "pk": "d7207632-6746-4c6a-848e-667a25c87c85",
+  "fields": {
+    "code": "DOC_HOME_LOAN_SANCTION_LETTER_TEMPLATE_000001_V2_b11b0f7f-587a-4aab-8fdc-849828be3300_ADDED",
+    "status": "DRAFT",
+    "created_at": "2026-07-16T09:10:14.257Z",
+    "updated_at": "2026-07-16T16:50:21.867Z",
+    "created_by": 1,
+    "updated_by": 1,
+    "is_deleted": false,
+    "deleted_at": null,
+    "version": "bececc60-1826-43a1-9b50-ac9a30b33dcd",
+    "element_id": "b11b0f7f-587a-4aab-8fdc-849828be3300",
+    "change_type": "ADDED",
+    "old_value": null,
+    "new_value": {
+      "x": 24,
+      "y": 104,
+      "id": "b11b0f7f-587a-4aab-8fdc-849828be3300",
+      "page": 1,
+      "text": "Dear {{applicant_name}},\nWe are pleased to inform you that your loan application has been approved. Your loan amount of {{loan_amount}} has been sanctioned at an interest rate of {{interest_rate}}.",
+      "type": "paragraph",
+      "align": "left",
+      "color": "#1F2937",
+      "label": "Paragraph",
+      "width": 760,
+      "height": 152,
+      "margin": 0,
+      "zIndex": 1,
+      "binding": "",
+      "groupId": null,
+      "opacity": 1,
+      "padding": 6,
+      "visible": true,
+      "fontSize": 14,
+      "imageUrl": "",
+      "rotation": 0,
+      "condition": "",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "borderColor": "#9AA9BA",
+      "borderWidth": 0,
+      "formatLabel": "none",
+      "formatValue": "none",
+      "tableFooter": false,
+      "tableHeader": true,
+      "repeatSource": "",
+      "tableBorders": true,
+      "tableColumns": [],
+      "tableSorting": "",
+      "labelPosition": "none",
+      "tableGrouping": "",
+      "textDecoration": "none",
+      "backgroundColor": "transparent",
+      "tableAlternating": true,
+      "tableRepeatingRows": false
+    },
+    "approval_status": "APPROVED",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-16T16:50:21.867Z",
+    "review_comment": ""
+  }
+},
+{
+  "model": "templates.templatestyle",
+  "pk": "e6b4c456-afaf-43d9-9a16-f4475f231863",
+  "fields": {
+    "code": "STY-E9A04F12898A",
+    "status": "ACTIVE",
+    "created_at": "2026-07-14T15:49:19.714Z",
+    "updated_at": "2026-07-14T15:49:19.714Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_deleted": false,
+    "deleted_at": null,
+    "template_version": "90bf6cde-e8c0-4eb3-896f-cb47fa7c9f87",
+    "page_size": "A4",
+    "orientation": "PORTRAIT",
+    "margin_top": "10.00",
+    "margin_bottom": "10.00",
+    "margin_left": "10.00",
+    "margin_right": "10.00",
+    "default_font": "Arial",
+    "default_font_size": 12,
+    "style_json": {}
+  }
+}
+]

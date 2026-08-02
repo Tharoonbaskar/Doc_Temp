@@ -1,0 +1,70 @@
+# ==========================================
+# Enterprise Dynamic Document Platform (EDDP)
+# Django Backend Requirements
+# ==========================================
+
+# Django
+Django==5.2.4
+
+# Django REST Framework
+djangorestframework==3.16.0
+djangorestframework-simplejwt==5.5.1
+
+# CORS
+django-cors-headers==4.7.0
+
+# Database
+psycopg2-binary==2.9.10
+
+# Environment Variables
+python-decouple==3.8
+
+# API Documentation
+drf-spectacular==0.28.0
+
+# Filtering & Pagination
+django-filter==25.1
+
+# PDF Generation
+xhtml2pdf==0.2.16
+reportlab==4.4.2
+python-docx==1.1.2
+pypdf==5.9.0
+
+# Images
+Pillow==11.3.0
+
+# Validation
+jsonschema==4.25.0
+
+# Diffing
+deepdiff==8.0.1
+
+# Date & Time
+python-dateutil==2.9.0.post0
+
+# HTTP Client
+requests==2.32.4
+
+# Logging
+colorlog==6.9.0
+
+# Utilities
+PyYAML==6.0.2
+mysqlclient==2.2.6
+# Development
+ipython==9.4.0
+django-extensions==4.1
+
+# Testing
+pytest==8.4.1
+pytest-django==4.11.1
+factory-boy==3.3.3
+
+# Production Server
+gunicorn==23.0.0
+whitenoise==6.9.0
+
+
+
+# CREATE DATABASE eddp_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
